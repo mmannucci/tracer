@@ -11,7 +11,10 @@ class PostTests extends GrailsUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
-
+    void testSelectedTagList() {
+        def post = new Post()
+        post.tags = 'pippo,pluto,paperino'
+        
+        assert post.selectedTagsList().containsAll(['pippo', 'pluto', 'paperino'])
     }
 }

@@ -4,3 +4,4 @@ target
 .project
 stacktrace.log
 .*.swp
+tracer-bug*.zip
