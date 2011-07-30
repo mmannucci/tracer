@@ -56,7 +56,7 @@
             </p>
             <p>
             <label for="body"><g:message code="post.body.label" default="Body" /></label><br />
-            <g:textArea name="body" cols="40" rows="5" value="${postInstance?.body}" />
+            <g:textArea name="body" cols="40" rows="5" class="${hasErrors(bean: postInstance, field: 'body', 'errors')}" value="${postInstance?.body}" />
             </p>
             <p>
             <label for="tags"><g:message code="post.tags.label" default="Tags" /></label>

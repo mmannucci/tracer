@@ -14,7 +14,6 @@ html * {
 body {
     background: #fff;
     color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
 }
 #grailsLogo {
 	padding:20px;
@@ -24,13 +23,6 @@ a:link, a:visited, a:hover {
     color: #666;
     font-weight: bold;
     text-decoration: none;
-}
-
-h1 {
-    color: #48802c;
-    font-weight: normal;
-    font-size: 16px;
-    margin: .8em 0 .3em 0;
 }
 
 ul {
@@ -105,14 +97,17 @@ div.error li {
     padding-left: 30px;
 }
 
-td.errors select {
-    background-color: red;
+select.errors {
+    background-color :#FBE3E4;
+    border-color: #8A1F11;
 }
 input.errors {
-    background-color: red;
+    background-color : #FBE3E4;
+    border-color: #8A1F11;
 }
-td.errors textarea {
-    background-color: red;
+textarea.errors {
+    background-color : #FBE3E4;
+    border-color: #8A1F11;
 }
 
 /* TABLES */

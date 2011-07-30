@@ -41,7 +41,6 @@
             <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
-            <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -54,7 +53,7 @@
                 <g:hiddenField name="id" value="${postInstance?.id}" />
                 <g:hiddenField name="version" value="${postInstance?.version}" />
             <fieldset>  
-            <legend>Insert post data</legend>
+            <legend>Edit post data</legend>
             <p>
             <label for="title"><g:message code="post.title.label" default="Title" /></label><br />
             <g:textField name="title" class="title ${hasErrors(bean: postInstance, field: 'title', 'errors')}" value="${postInstance?.title}" />
