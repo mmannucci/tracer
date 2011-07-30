@@ -29,7 +29,7 @@
                 {id: "Java", name: "Java"}
             ],
             {preventDuplicates: true,
-             prePopulate: selected});
+             prePopulate: ${selectedTags}});
         });
         </script>
     </head>

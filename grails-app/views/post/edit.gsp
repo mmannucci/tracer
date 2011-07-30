@@ -17,7 +17,6 @@
          <script type="text/javascript"> 
         $(document).ready(function() {
 
-            var selected = ${selectedTags}
             $("#tags").tokenInput([
                 {id: "Ruby", name: "Ruby"},
                 {id: "Python", name: "Python"},
@@ -29,7 +28,7 @@
                 {id: "Java", name: "Java"}
             ],
             {preventDuplicates: true,
-             prePopulate: selected});
+             prePopulate: ${selectedTags}});
         });
         </script>
 
