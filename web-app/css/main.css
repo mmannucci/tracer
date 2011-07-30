@@ -14,7 +14,6 @@ html * {
 body {
     background: #fff;
     color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
 }
 #grailsLogo {
 	padding:20px;
@@ -26,31 +25,12 @@ a:link, a:visited, a:hover {
     text-decoration: none;
 }
 
-h1 {
-    color: #48802c;
-    font-weight: normal;
-    font-size: 16px;
-    margin: .8em 0 .3em 0;
-}
-
 ul {
     padding-left: 15px;
 }
 
-input, select, textarea {
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
-    font: 11px verdana, arial, helvetica, sans-serif;
-    margin: 2px 0;
-    padding: 2px 4px;
-}
 select {
    padding: 2px 2px 2px 0;
-}
-textarea {
-	width: 250px;
-	height: 150px;
-	vertical-align: top;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -58,7 +38,6 @@ input:focus, select:focus, textarea:focus {
 }
 
 .body {
-    float: left;
     margin: 0 15px 10px 15px;
 }
 
@@ -69,6 +48,7 @@ input:focus, select:focus, textarea:focus {
     border: 1px solid #ccc;
     border-style: solid none solid none;
     margin-top: 5px;
+    margin-bottom: 5px;
     padding: 7px 12px;
 }
 
@@ -106,31 +86,28 @@ input:focus, select:focus, textarea:focus {
     padding: 5px 5px 5px 30px
 }
 
-div.errors {
-    background: #fff3f3;
-    border: 1px solid red;
-    color: #cc0000;
-    margin: 10px 0 5px 0;
-    padding: 5px 0 5px 0;
-}
-div.errors ul {
+div.error ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-div.errors li {
+div.error li {
 	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
     line-height: 16px;
     padding-left: 30px;
 }
 
-td.errors select {
-    border: 1px solid red;
+select.errors {
+    background-color :#FBE3E4;
+    border-color: #8A1F11;
 }
-td.errors input {
-    border: 1px solid red;
+input.errors {
+    background-color : #FBE3E4;
+    border-color: #8A1F11;
 }
-td.errors textarea {
-    border: 1px solid red;
+textarea.errors {
+    background-color : #FBE3E4;
+    border-color: #8A1F11;
 }
 
 /* TABLES */
@@ -271,3 +248,10 @@ th.desc a {
     background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
     padding-left: 28px;
 }
+
+fieldset {   
+  -moz-border-radius:5px;  
+  border-radius: 5px;  
+  -webkit-border-radius: 5px; //edit :D
+}
+
