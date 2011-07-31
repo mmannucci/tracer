@@ -5,6 +5,13 @@ class Post {
     String title
     String body
     String tags
+
+    /*
+     * autotimestamp
+     */
+    Date dateCreated
+    Date lastUpdated
+    
     static constraints = {
         title(nullable:false, blank:false)
         body(nullable:false, blank:false, maxSize:1000)
