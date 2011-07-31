@@ -33,10 +33,6 @@ select {
    padding: 2px 2px 2px 0;
 }
 
-input:focus, select:focus, textarea:focus {
-    border: 1px solid #b2d1ff;
-}
-
 .body {
     margin: 0 15px 10px 15px;
 }
@@ -252,6 +248,6 @@ th.desc a {
 fieldset {   
   -moz-border-radius:5px;  
   border-radius: 5px;  
-  -webkit-border-radius: 5px; //edit :D
+  -webkit-border-radius: 5px;
 }
 
