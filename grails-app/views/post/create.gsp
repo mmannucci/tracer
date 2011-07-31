@@ -1,6 +1,6 @@
 
 
-<%@ page import="org.markomannux.tracer.tokeninput.Post" %>
+<%@ page import="org.markomannux.tracer.blog.Post" %>
 <%@ page import="grails.converters.*" %>
 <html>
     <head>

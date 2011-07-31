@@ -1,4 +1,4 @@
-package org.markomannux.tracer.tokeninput
+package org.markomannux.tracer.blog
 
 import grails.test.*
 

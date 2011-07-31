@@ -1,4 +1,4 @@
-import org.markomannux.tracer.tokeninput.Post
+import org.markomannux.tracer.blog.Post
 fixture {
     post1(Post, title: "About fixtures") {
         body = """Fixtures are a way to define data in tests.

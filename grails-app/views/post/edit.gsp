@@ -1,6 +1,6 @@
 
 
-<%@ page import="org.markomannux.tracer.tokeninput.Post" %>
+<%@ page import="org.markomannux.tracer.blog.Post" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
