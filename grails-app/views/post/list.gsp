@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
+        <link rel="stylesheet" href="${resource(dir:'css', file:'post.css')}" type="text/css" media="screen, projection">
         <g:set var="entityName" value="${message(code: 'post.label', default: 'Post')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
@@ -16,38 +17,9 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <div class="list">
-                <table>
-                    <thead>
-                        <tr>
-                        
-                            <g:sortableColumn property="id" title="${message(code: 'post.id.label', default: 'Id')}" />
-                        
-                            <g:sortableColumn property="title" title="${message(code: 'post.title.label', default: 'Title')}" />
-                        
-                            <g:sortableColumn property="body" title="${message(code: 'post.body.label', default: 'Body')}" />
-                        
-                            <g:sortableColumn property="tags" title="${message(code: 'post.tags.label', default: 'Tags')}" />
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${postInstanceList}" status="i" var="postInstance">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td><g:link action="show" id="${postInstance.id}">${fieldValue(bean: postInstance, field: "id")}</g:link></td>
-                        
-                            <td>${fieldValue(bean: postInstance, field: "title")}</td>
-                        
-                            <td>${fieldValue(bean: postInstance, field: "body")}</td>
-                        
-                            <td>${fieldValue(bean: postInstance, field: "tags")}</td>
-                        
-                        </tr>
-                    </g:each>
-                    </tbody>
-                </table>
-            </div>
+            <g:each in="${postInstanceList}" var="postInstance">
+            <g:render template="post" bean="${postInstance}" var="post" />
+            </g:each>
             <div class="paginateButtons">
                 <g:paginate total="${postInstanceTotal}" />
             </div>
