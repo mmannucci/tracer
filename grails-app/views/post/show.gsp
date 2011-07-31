@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
+        <link rel="stylesheet" href="${resource(dir:'css', file:'post.css')}" type="text/css" media="screen, projection">
         <g:set var="entityName" value="${message(code: 'post.label', default: 'Post')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
@@ -17,47 +18,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <div class="dialog">
-                <table>
-                    <tbody>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="post.id.label" default="Id" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: postInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="post.title.label" default="Title" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: postInstance, field: "title")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="post.body.label" default="Body" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: postInstance, field: "body")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="post.tags.label" default="Tags" /></td>
-                            
-                            <td valign="top" class="value">
-                                <ul>
-                                <g:each in="${postInstance.selectedTagsList()}" var="tag">
-                                    <li>${tag}</li>
-                                </g:each>
-                                </ul>
-                            </td>
-                            
-                        </tr>
-                    
-                    </tbody>
-                </table>
-            </div>
+            <g:render template="post" bean="${postInstance}" var="post" />
             <div class="buttons">
                 <g:form>
                     <g:hiddenField name="id" value="${postInstance?.id}" />
