@@ -2,6 +2,7 @@ package org.markomannux.tracer.blog
 
 class Post {
 
+    Author author
     String title
     String body
     String tags
