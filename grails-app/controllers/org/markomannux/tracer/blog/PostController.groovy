@@ -12,6 +12,14 @@ class PostController {
 
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        def postList = Post.nestedPropertiesAwareList(params)
+        [postInstanceList: postList, postInstanceTotal: postList.totalCount]
+    }
+
+    def timeline = {
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+        params.sort = 'dateCreated'
+        params.order = 'desc'
         [postInstanceList: Post.list(params), postInstanceTotal: Post.count()]
     }
 

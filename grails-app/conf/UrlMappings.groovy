@@ -8,6 +8,7 @@ class UrlMappings {
 		}
 
 		"/"(view:"/index")
+        "/timeline"(controller:"post", action:"timeline")
 		"500"(view:'/error')
 	}
 }

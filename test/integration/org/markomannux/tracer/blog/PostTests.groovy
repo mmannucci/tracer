@@ -12,8 +12,14 @@ class PostTests extends GroovyTestCase {
         super.tearDown()
     }
 
-    void testList() {
+    void testCount() {
         fixtureLoader.load('posts')
         assertEquals 2, Post.count()
+    }
+
+    void testOrderByAuthor() {
+        fixtureLoader['posts'].load('posts_for_ordering')
+        def orderedPostList = Post.nestedPropertiesAwareList([sort:'a.name', order:'desc'])
+        assertEquals fixtureLoader['posts'].denise, orderedPostList[0].author
     }
 }
