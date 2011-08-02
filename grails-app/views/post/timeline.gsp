@@ -6,7 +6,7 @@
         <meta name="layout" content="main" />
         <link rel="stylesheet" href="${resource(dir:'css', file:'post.css')}" type="text/css" media="screen, projection">
         <g:set var="entityName" value="${message(code: 'post.label', default: 'Post')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Timeline</title>
     </head>
     <body>
         <div class="nav">
@@ -18,7 +18,7 @@
             <div class="message">${flash.message}</div>
             </g:if>
             <g:each in="${postInstanceList}" var="postInstance">
-            <g:render template="post" bean="${postInstance}" var="post" />
+                <g:render template="post" bean="${postInstance}" var="post" />
             </g:each>
             <div class="paginateButtons">
                 <g:paginate total="${postInstanceTotal}" />

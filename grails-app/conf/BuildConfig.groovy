@@ -26,6 +26,7 @@ grails.project.dependency.resolution = {
     plugins {
         test ':build-test-data:1.1.1'
         test ':fixtures:1.0.7'
+        test ':webdriver:0.3.2'
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.

@@ -14,6 +14,7 @@ class Post {
     Date lastUpdated
     
     static constraints = {
+        author(nullable:true)
         title(nullable:false, blank:false)
         body(nullable:false, blank:false, maxSize:1000)
         tags(nullable:true)
