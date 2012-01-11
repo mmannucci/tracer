@@ -22,12 +22,15 @@ class CreatePostTests extends FunctionalTest {
         fixtureLoader = ctx.fixtureLoader
         fixtureLoader.load('posts')
         createPostPage = webdriver.open('/post/create', CreatePostPage.class)
+        println webdriver.driver.class
     }
 
     @Test
     public void testCreatePostWithEmptyField() {
         createPostPage.create.clickStay()
-        assertTrue(createPostPage.errors.matches(/.*title.*/))
+
+        assertTrue(createPostPage.errors.contains('title'))
+        assertTrue(createPostPage.errors.contains('body'))
 	}
 
     @Test
@@ -37,6 +40,12 @@ class CreatePostTests extends FunctionalTest {
         ShowPostPage showPage = createPostPage.create.click()
 
         assertEquals 'A good test', showPage.title 
+    }
+
+    @Test
+    public void testTokenInputAutomplete() {
+       createPostPage.enterTagQuery()
+       createPostPage.waitForAsyncContent()
     }
 }
 
